@@ -49,7 +49,7 @@ console.log(younger.reverse)
 	(Part 1, Part 2, and Part 3) using a while-loop.
 */
 
-//part 1
+//part a
 var i = 0;
 
 while (ages[i]) {
@@ -58,21 +58,25 @@ while (ages[i]) {
 }
 
 
-// part 2
+// part b
 
 // if # in ages is < 20, add to younger array. if # is > 20, do not add to younger array. repeat until list is finished.
 
 
 var younger = [];
-
-
-while (ages[i] < 20) {
-    younger.push(ages[i]);
+while (i <= ages.length) {
+    if (ages[i] < 20) {
+        younger.push(ages[i]);
+    }
     i++;
 }
 
 console.log(younger);
 
+
+//part c
+
+? ?
 
 /*
 	Part 5: Create a function, getDayOfWeek, that will tell you what day of the week it is.
@@ -132,3 +136,16 @@ console.log(`Today is ${day}`);
 	in our array?
 	(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
 */
+
+var ingredients = ['pepperoni'];
+
+function addPepperoniToPizza(ingredients) {
+    for (i = 0; i <= ingredients.length; i++) {
+        if (i == 'pepperoni') {
+            console.log(ingredients[i]);
+        } else {
+            ingredients.push('pepperoni');
+            console.log(ingredients[i]);
+        }
+    }
+}
